@@ -1,0 +1,14 @@
+name: Testing github actions
+
+on: [push]
+
+jobs:
+  run-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: list linux directories
+        run: ls -l /
+      - name: get system informations
+        run: |
+          uname -a
+          cat /proc/cpuinfo
